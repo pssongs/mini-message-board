@@ -1,0 +1,109 @@
+:root {
+  --text-color: #ffffff;
+  --bg-color: #09090b;
+  --card-color: #27272a;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #000000;
+    --bg-color: #ffffff;
+    --card-color: #f4f4f5;
+  }
+}
+
+body {
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+a {
+  color: #00b7ff;
+}
+
+.msgs {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.msg {
+  background-color: var(--card-color);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.msg-head {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p.added {
+  margin: 0;
+}
+
+header.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input,
+textarea {
+  color: var(--text-color);
+  background-color: var(--card-color);
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+input:-webkit-autofill {
+  transition: all 0s 50000s;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 2px 1px #00b7ff;
+}
+
+form {
+  width: clamp(250px, 100%, 400px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+button,
+a {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+button {
+  background-color: var(--card-color);
+  color: var(--text-color);
+}
+
+button:active {
+  transform: translateY(3px);
+}

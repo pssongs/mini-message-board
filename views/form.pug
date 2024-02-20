@@ -1,0 +1,17 @@
+extends layout 
+
+block content
+  header.header
+    .info
+      h1= title
+    .form-link
+      a(href="/") Home
+    
+  form(action="/new", method="post")
+    label(for="user") Name
+      input#user(type="text", name="user", required)
+    label(for="msgText") Text
+      textarea#msgText(name="msgText", cols="30", rows="10" required)
+    .buttons 
+      button(type="submit") Add
+      button(type="reset") Reset
